@@ -1,7 +1,7 @@
 function calculateDosage() {
     const weight = document.getElementById("weight").value;
     if (weight) {
-        const dosage = (weight * 0.03).toFixed(1);
+        const dosage = (weight * 0.08).toFixed(1);
         document.getElementById(
             "result"
         ).innerHTML = `Empfohlene tägliche Dosierung: ${dosage} Gramm`;
