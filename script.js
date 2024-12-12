@@ -10,7 +10,7 @@ function calculateDosage() {
         return;
     }
 
-    const recommendedDosage = (weight * 0.6).toFixed(1);
+    const recommendedDosage = (weight * 0.1).toFixed(1);
 
     resultElement.textContent = `Empfohlene Tagesdosis: ${recommendedDosage} Gramm Kreatin`;
 }
@@ -50,4 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('hidden-section');
         observer.observe(section);
     });
+});
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 100) {
+        header.classList.add('shrink');
+        if (window.scrollY > 200) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+    } else {
+        header.classList.remove('shrink', 'hidden');
+    }
 });
