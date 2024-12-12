@@ -261,8 +261,8 @@
           labels: ["Tag 1", "Tag 3", "Woche 1", "Woche 2", "Woche 4", "Monat 2"],
           datasets: [
               {
-                  label: "Möglicher-Gehirn-Performance-Zuwachs (%)",
-                  data: [0, 4, 8, 12, 16, 17],
+                  label: "Potenzieller-Gehirn-Performance-Zuwachs (%)",
+                  data: [0, 2, 4, 6, 8, 10],
                   borderColor: "#2C3E50",
                   backgroundColor: "rgba(44, 62, 80, 0.3)", // Adjusted for transparency
                   borderWidth: 2,
@@ -308,5 +308,6 @@
       const creatineChart = new Chart(performanceCtx, {...config, data: performanceData});
       const brainChart = new Chart(brainCtx, {...config, data: brainData});
   </script>
+</div>
 </body>
 </html>
