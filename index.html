@@ -9,287 +9,304 @@
   <script src="aibot.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="header" id="header">
-  <div class="logo">
-    <img src="https://ih1.redbubble.net/image.2520758911.5978/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Logo">
-  </div>
-  <div class="nav">
-    <ul>
-      <li><a href="#studies">Studien</a></li>
-      <li><a href="#benefits">Vorteile</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-  </div>
-</div>
-<!-- Add scroll effect -->
-<script>
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('header');
-        if (window.scrollY > 100) {
-            header.classList.add('shrink');
-        } else {
-            header.classList.remove('shrink');
-        }
-    });
-</script>
-<header>
-  <h1>Alles über Kreatin</h1>
-</header>
-
-
-<main>
-  <section id="what-is-creatine" class="section">
-    <h2>Was ist Kreatin?</h2>
-    <p>
-      Kreatin ist ein körpereigener Stoff, der in den Muskeln gespeichert wird und für die Bereitstellung von Energie
-      bei kurzen, intensiven Belastungen verantwortlich ist. Er spielt eine entscheidende Rolle bei der Steigerung der
-      Leistung in Aktivitäten wie Sprinten oder Krafttraining. Unser Körper stellt Kreatin selbst her, hauptsächlich aus
-      den Aminosäuren Arginin, Glycin und Methionin. Zusätzlich kommt Kreatin auch in tierischen Lebensmitteln wie
-      Fleisch und Fisch vor.
-      <br><br>
-      Kreatin ist eines der am besten untersuchten Nahrungsergänzungsmittel im Bereich Sport und Fitness und gilt als
-      sicher. Viele Sportler nutzen Kreatin zur Leistungssteigerung, besonders bei intensiven Trainingsphasen. Es hilft,
-      die Muskelkraft zu steigern und die Erholung nach dem Training zu beschleunigen.
-      <br><br>
-      Wenn du mehr über die Wirkung und die richtige Anwendung von Kreatin erfahren möchtest, lies diesen detaillierten
-      Artikel, der dir alles Wissenswerte bietet!
-    </p>
-  </section>
-
-  <section id="benefits" class="section">
-    <h2>Vorteile von Kreatin</h2>
-    <p>Kreatin bietet viele Vorteile für Sportler und Fitnessbegeisterte. Es verbessert nicht nur die körperliche
-      Leistung, sondern trägt auch zur schnelleren Regeneration bei.</p>
-    <ul>
-      <li><strong>Erhöhung der Muskelkraft und -leistung:</strong> Kreatin steigert die ATP-Produktion, was dir hilft,
-        bei kurzen, intensiven Belastungen wie Gewichtheben oder Sprinten eine höhere Leistung zu erbringen.
-      </li>
-      <li><strong>Förderung des Muskelwachstums:</strong> Kreatin zieht Wasser in die Muskelzellen und unterstützt so
-        die Proteinsynthese. Dies trägt dazu bei, größere und stärkere Muskeln aufzubauen.
-      </li>
-      <li><strong>Schnellere Regeneration:</strong> Kreatin hilft, die Erholungszeit zwischen den Trainingseinheiten zu
-        verkürzen und den Muskelabbau zu verringern.
-      </li>
-      <li><strong>Potenzielle kognitive Vorteile:</strong> Neuere Studien zeigen, dass Kreatin auch die geistige
-        Leistung steigern kann, indem es die Energieversorgung des Gehirns verbessert.
-      </li>
-    </ul>
-  </section>
-
-  <section id="studies" class="section">
-    <h2>Wissenschaftliche Studien</h2>
-    <p>
-      Eine umfassende <a href="https://www.mdpi.com/2072-6643/15/9/2116">Meta-Analyse</a> belegt, dass Kreatin in
-      Kombination mit Krafttraining signifikante Verbesserungen der Muskelkraft bewirken kann. Besonders bei Männern
-      sind die Fortschritte deutlich größer als bei Frauen. Es wurde auch festgestellt, dass höhere Kreatindosen zu
-      besseren Ergebnissen führen.
-    </p>
-    <p>
-      In einer weiteren <a href="https://www.mdpi.com/2072-6643/13/11/3757">Studie</a> wurde untersucht, wie Kreatin bei
-      hochintensiven Belastungen wirkt. Hier zeigte sich, dass Kreatin die intramuskulären Phosphatspeicher aufbaut und
-      so die Energieversorgung während intensiver Übungen verbessert.
-    </p>
-    <p>
-      Eine neue <a href="https://www.nature.com/articles/s41598-024-54249-9#Sec24">Studie</a> zur Wirkung von Kreatin
-      auf die geistige Leistung zeigt, dass Kreatin auch positive Auswirkungen auf kognitive Funktionen haben kann. Die
-      Studie belegt, dass Kreatin die Gedächtnisleistung und die geistige Wachsamkeit steigern kann, insbesondere bei
-      Aufgaben, die mit kurzfristigem Gedächtnis und Konzentration zu tun haben.
-    </p>
-    <p>
-      Diese wissenschaftlichen Erkenntnisse zeigen, dass Kreatin eine wertvolle Ergänzung für die Steigerung von
-      Muskelkraft, Leistungsfähigkeit und geistiger Fitness darstellt.
-    </p>
-  </section>
-
-
-  <section>
-    <canvas id="performanceChart"></canvas>
-  </section>
-  <section>
-    <canvas id="brainChart"></canvas>
-  </section>
-
-  <section id="usage" class="section">
-    <h2>Wie verwendet man Kreatin?</h2>
-    <p>
-      Die empfohlene Tagesdosis liegt bei 4-6 Gramm. Manche Athleten entscheiden sich für eine 'Ladephase', bei der sie
-      5-7 Tage lang 20 Gramm pro Tag einnehmen, gefolgt von einer Erhaltungsdosis von 3-5 Gramm täglich.
-      Diese Ladephase ist jedoch optional und nicht unbedingt erforderlich. Hier kannst du deine optimale Dosis
-      berechnen.
-    </p>
-
-    <div class="calculator">
-      <h3>Kreatin-Dosierungsrechner</h3>
-      <input type="number" id="weight" placeholder="Ihr Gewicht in kg"/>
-      <button onclick="calculateDosage()">Dosierung berechnen</button>
-      <p id="result"></p>
+<div class="container">
+  <div class="header" id="header">
+    <div class="logo">
+      <img src="https://ih1.redbubble.net/image.2520758911.5978/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Logo">
     </div>
-  </section>
-
-  <section id="side-effects" class="section">
-    <h2>Mögliche Nebenwirkungen</h2>
-    <p>
-      Kreatin gilt allgemein als sicher, jedoch können einige Menschen leichte Nebenwirkungen erfahren, wie:
-    </p>
-    <ul>
-      <li>Gewichtszunahme aufgrund von Wassereinlagerungen in den Muskeln (Was bei Kraftsport positiv ist)</li>
-      <li>Magen-Darm-Beschwerden, insbesondere bei höheren Dosierungen</li>
-      <li>Gelegentliche Muskelkrämpfe, bei zu wenig Wasser (mind. 2-3 Liter am Tag)</li>
-    </ul>
-  </section>
-
-  <section id="creatine-for-teens" class="section">
-    <h2>Kreatin für Jugendliche</h2>
-    <p>
-      Die Frage, ob Jugendliche Kreatin einnehmen sollten, wird häufig gestellt. Kreatin gilt allgemein als sicher für
-      gesunde Erwachsene, ebenso wie für Jugendliche. Einige Studien zeigen, dass Kreatin auch
-      bei Jugendlichen zu einer Leistungssteigerung führen kann, insbesondere bei kurzen, intensiven Belastungen wie
-      Sprinten oder Gewichtheben. Allerdings wurde die Wirkung von Kreatin bei Jugendlichen noch nicht so umfassend
-      untersucht wie bei Erwachsenen.
-    </p>
-    <p>
-      Es ist jedoch wichtig, dass Jugendliche Kreatin nur unter Aufsicht von Experten und in Kombination mit einem
-      ausgewogenen Trainings- und Ernährungsplan einnehmen. Die Einnahme von Kreatin sollte nicht als Ersatz für eine
-      gesunde Ernährung und ausreichend Schlaf betrachtet werden.
-    </p>
-    <p>
-      Einige Experten empfehlen, dass Jugendliche die Einnahme von Kreatin auf diejenigen beschränken, die bereits über
-      eine gewisse Trainingserfahrung verfügen, um sicherzustellen, dass das Supplement effektiv und sicher eingesetzt
-      wird.
-      Auch hier ist es ratsam, vor der Einnahme mit einem Arzt oder Ernährungsberater zu sprechen.
-    </p>
-    <p>
-      Insgesamt sollten Jugendliche Kreatin nur dann in Betracht ziehen, wenn sie ihre körperliche Leistung gezielt
-      steigern möchten, insbesondere bei sportlichen Aktivitäten, die von kurzen, intensiven Belastungen geprägt sind,
-      wie z. B. Sprinten oder Krafttraining.
-    </p>
-  </section>
+    <div class="nav">
+      <ul>
+        <li><a href="#studies">Studien</a></li>
+        <li><a href="#benefits">Vorteile</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+      window.addEventListener('scroll', () => {
+          const header = document.getElementById('header');
+          if (window.scrollY > 100) {
+              header.classList.add('shrink');
+          } else {
+              header.classList.remove('shrink');
+          }
+      });
+  </script>
+  <header>
+    <h1>Alles über Kreatin</h1>
+  </header>
 
 
-  <section id="faq" class="section">
-    <h2>Häufig gestellte Fragen</h2>
-    <div class="faq-item">
-      <div class="faq-question">Ist Kreatin für jeden geeignet?</div>
-      <div class="faq-answer">
-        Kreatin ist für die meisten gesunden Erwachsenen unbedenklich. Personen mit Nierenproblemen oder anderen
-        gesundheitlichen Einschränkungen sollten vor der Einnahme einen Arzt konsultieren.
+  <main>
+    <section id="what-is-creatine" class="section">
+      <h2>Was ist Kreatin?</h2>
+      <p>
+        Kreatin ist ein körpereigener Stoff, der in den Muskeln gespeichert wird und für die Bereitstellung von Energie
+        bei kurzen, intensiven Belastungen verantwortlich ist. Er spielt eine entscheidende Rolle bei der Steigerung der
+        Leistung in Aktivitäten wie Sprinten oder Krafttraining. Unser Körper stellt Kreatin selbst her, hauptsächlich
+        aus
+        den Aminosäuren Arginin, Glycin und Methionin. Zusätzlich kommt Kreatin auch in tierischen Lebensmitteln wie
+        Fleisch und Fisch vor.
+        <br><br>
+        Kreatin ist eines der am besten untersuchten Nahrungsergänzungsmittel im Bereich Sport und Fitness und gilt als
+        sicher. Viele Sportler nutzen Kreatin zur Leistungssteigerung, besonders bei intensiven Trainingsphasen. Es
+        hilft,
+        die Muskelkraft zu steigern und die Erholung nach dem Training zu beschleunigen.
+        <br><br>
+        Wenn du mehr über die Wirkung und die richtige Anwendung von Kreatin erfahren möchtest, lies diesen
+        detaillierten
+        Artikel, der dir alles Wissenswerte bietet!
+      </p>
+    </section>
+
+    <section id="benefits" class="section">
+      <h2>Vorteile von Kreatin</h2>
+      <p>Kreatin bietet viele Vorteile für Sportler und Fitnessbegeisterte. Es verbessert nicht nur die körperliche
+        Leistung, sondern trägt auch zur schnelleren Regeneration bei.</p>
+      <ul>
+        <li><strong>Erhöhung der Muskelkraft und -leistung:</strong> Kreatin steigert die ATP-Produktion, was dir hilft,
+          bei kurzen, intensiven Belastungen wie Gewichtheben oder Sprinten eine höhere Leistung zu erbringen.
+        </li>
+        <li><strong>Förderung des Muskelwachstums:</strong> Kreatin zieht Wasser in die Muskelzellen und unterstützt so
+          die Proteinsynthese. Dies trägt dazu bei, größere und stärkere Muskeln aufzubauen.
+        </li>
+        <li><strong>Schnellere Regeneration:</strong> Kreatin hilft, die Erholungszeit zwischen den Trainingseinheiten
+          zu
+          verkürzen und den Muskelabbau zu verringern.
+        </li>
+        <li><strong>Potenzielle kognitive Vorteile:</strong> Neuere Studien zeigen, dass Kreatin auch die geistige
+          Leistung steigern kann, indem es die Energieversorgung des Gehirns verbessert.
+        </li>
+      </ul>
+    </section>
+
+    <section id="studies" class="section">
+      <h2>Wissenschaftliche Studien</h2>
+      <p>
+        Eine umfassende <a href="https://www.mdpi.com/2072-6643/15/9/2116">Meta-Analyse</a> belegt, dass Kreatin in
+        Kombination mit Krafttraining signifikante Verbesserungen der Muskelkraft bewirken kann. Besonders bei Männern
+        sind die Fortschritte deutlich größer als bei Frauen. Es wurde auch festgestellt, dass höhere Kreatindosen zu
+        besseren Ergebnissen führen.
+      </p>
+      <p>
+        In einer weiteren <a href="https://www.mdpi.com/2072-6643/13/11/3757">Studie</a> wurde untersucht, wie Kreatin
+        bei
+        hochintensiven Belastungen wirkt. Hier zeigte sich, dass Kreatin die intramuskulären Phosphatspeicher aufbaut
+        und
+        so die Energieversorgung während intensiver Übungen verbessert.
+      </p>
+      <p>
+        Eine neue <a href="https://www.nature.com/articles/s41598-024-54249-9#Sec24">Studie</a> zur Wirkung von Kreatin
+        auf die geistige Leistung zeigt, dass Kreatin auch positive Auswirkungen auf kognitive Funktionen haben kann.
+        Die
+        Studie belegt, dass Kreatin die Gedächtnisleistung und die geistige Wachsamkeit steigern kann, insbesondere bei
+        Aufgaben, die mit kurzfristigem Gedächtnis und Konzentration zu tun haben.
+      </p>
+      <p>
+        Diese wissenschaftlichen Erkenntnisse zeigen, dass Kreatin eine wertvolle Ergänzung für die Steigerung von
+        Muskelkraft, Leistungsfähigkeit und geistiger Fitness darstellt.
+      </p>
+    </section>
+
+
+    <section>
+      <canvas id="performanceChart"></canvas>
+    </section>
+    <section>
+      <canvas id="brainChart"></canvas>
+    </section>
+
+    <section id="usage" class="section">
+      <h2>Wie verwendet man Kreatin?</h2>
+      <p>
+        Die empfohlene Tagesdosis liegt bei 4-6 Gramm. Manche Athleten entscheiden sich für eine 'Ladephase', bei der
+        sie
+        5-7 Tage lang 20 Gramm pro Tag einnehmen, gefolgt von einer Erhaltungsdosis von 3-5 Gramm täglich.
+        Diese Ladephase ist jedoch optional und nicht unbedingt erforderlich. Hier kannst du deine optimale Dosis
+        berechnen.
+      </p>
+
+      <div class="calculator">
+        <h3>Kreatin-Dosierungsrechner</h3>
+        <input type="number" id="weight" placeholder="Ihr Gewicht in kg"/>
+        <button onclick="calculateDosage()">Dosierung berechnen</button>
+        <p id="result"></p>
       </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Wann sollte ich Kreatin einnehmen?</div>
-      <div class="faq-answer">
-        Kreatin kann zu jeder Tageszeit eingenommen werden. Einige Studien empfehlen die Einnahme nach dem Training, um
-        von den regenerativen Vorteilen am meisten zu profitieren.
+    </section>
+
+    <section id="side-effects" class="section">
+      <h2>Mögliche Nebenwirkungen</h2>
+      <p>
+        Kreatin gilt allgemein als sicher, jedoch können einige Menschen leichte Nebenwirkungen erfahren, wie:
+      </p>
+      <ul>
+        <li>Gewichtszunahme aufgrund von Wassereinlagerungen in den Muskeln (Was bei Kraftsport positiv ist)</li>
+        <li>Magen-Darm-Beschwerden, insbesondere bei höheren Dosierungen</li>
+        <li>Gelegentliche Muskelkrämpfe, bei zu wenig Wasser (mind. 2-3 Liter am Tag)</li>
+      </ul>
+    </section>
+
+    <section id="creatine-for-teens" class="section">
+      <h2>Kreatin für Jugendliche</h2>
+      <p>
+        Die Frage, ob Jugendliche Kreatin einnehmen sollten, wird häufig gestellt. Kreatin gilt allgemein als sicher für
+        gesunde Erwachsene, ebenso wie für Jugendliche. Einige Studien zeigen, dass Kreatin auch
+        bei Jugendlichen zu einer Leistungssteigerung führen kann, insbesondere bei kurzen, intensiven Belastungen wie
+        Sprinten oder Gewichtheben. Allerdings wurde die Wirkung von Kreatin bei Jugendlichen noch nicht so umfassend
+        untersucht wie bei Erwachsenen.
+      </p>
+      <br>
+      <p>
+        Es ist jedoch wichtig, dass Jugendliche Kreatin nur unter Aufsicht von Experten und in Kombination mit einem
+        ausgewogenen Trainings- und Ernährungsplan einnehmen. Die Einnahme von Kreatin sollte nicht als Ersatz für eine
+        gesunde Ernährung und ausreichend Schlaf betrachtet werden.
+      </p>
+      <br>
+      <p>
+        Einige Experten empfehlen, dass Jugendliche die Einnahme von Kreatin auf diejenigen beschränken, die bereits
+        über
+        eine gewisse Trainingserfahrung verfügen, um sicherzustellen, dass das Supplement effektiv und sicher eingesetzt
+        wird.
+        Auch hier ist es ratsam, vor der Einnahme mit einem Arzt oder Ernährungsberater zu sprechen.
+      </p>
+      <br>
+      <p>
+        Insgesamt sollten Jugendliche Kreatin nur dann in Betracht ziehen, wenn sie ihre körperliche Leistung gezielt
+        steigern möchten, insbesondere bei sportlichen Aktivitäten, die von kurzen, intensiven Belastungen geprägt sind,
+        wie z. B. Sprinten oder Krafttraining.
+      </p>
+    </section>
+
+
+    <section id="faq" class="section">
+      <h2>Häufig gestellte Fragen</h2>
+      <div class="faq-item">
+        <div class="faq-question">Ist Kreatin für jeden geeignet?</div>
+        <div class="faq-answer">
+          Kreatin ist für die meisten gesunden Erwachsenen unbedenklich. Personen mit Nierenproblemen oder anderen
+          gesundheitlichen Einschränkungen sollten vor der Einnahme einen Arzt konsultieren.
+        </div>
       </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Muss ich Kreatin "laden"?</div>
-      <div class="faq-answer">
-        Eine Ladephase ist nicht zwingend erforderlich, aber sie kann den Effekt beschleunigen. Ohne Ladephase füllen
-        sich die Kreatinspeicher nach etwa 3-4 Wochen regelmäßiger Einnahme ebenfalls auf.
+      <div class="faq-item">
+        <div class="faq-question">Wann sollte ich Kreatin einnehmen?</div>
+        <div class="faq-answer">
+          Kreatin kann zu jeder Tageszeit eingenommen werden. Einige Studien empfehlen die Einnahme nach dem Training,
+          um
+          von den regenerativen Vorteilen am meisten zu profitieren.
+        </div>
       </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Soll ich Kreatin nehmen oder nicht?</div>
-      <div class="faq-answer">
-        Die Entscheidung, ob du Kreatin einnehmen solltest, hängt von deinen persönlichen Zielen und deinem
-        Trainingsplan ab. Wenn du unsicher bist, ist es ratsam, eine zusätzliche Recherche durchzuführen oder mit einem
-        Facharzt oder Ernährungsberater zu sprechen.
+      <div class="faq-item">
+        <div class="faq-question">Muss ich Kreatin "laden"?</div>
+        <div class="faq-answer">
+          Eine Ladephase ist nicht zwingend erforderlich, aber sie kann den Effekt beschleunigen. Ohne Ladephase füllen
+          sich die Kreatinspeicher nach etwa 3-4 Wochen regelmäßiger Einnahme ebenfalls auf.
+        </div>
       </div>
+      <div class="faq-item">
+        <div class="faq-question">Soll ich Kreatin nehmen oder nicht?</div>
+        <div class="faq-answer">
+          Die Entscheidung, ob du Kreatin einnehmen solltest, hängt von deinen persönlichen Zielen und deinem
+          Trainingsplan ab. Wenn du unsicher bist, ist es ratsam, eine zusätzliche Recherche durchzuführen oder mit
+          einem
+          Facharzt oder Ernährungsberater zu sprechen.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="chat-icon" class="chat-icon">
+    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+  </div>
+
+  <div id="chat-window" class="chat-window hidden">
+    <div class="chat-header">
+      <h3>Live Chatbot</h3>
+      <button id="close-chat" class="close-chat">&times;</button>
     </div>
-  </section>
-</main>
-
-<div id="chat-icon" class="chat-icon">
-  <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-</div>
-
-<div id="chat-window" class="chat-window hidden">
-  <div class="chat-header">
-    <h3>Live Chatbot</h3>
-    <button id="close-chat" class="close-chat">&times;</button>
+    <div id="chat-content" class="chat-content">
+      <div class="chat-message bot">Hallo! Wie kann ich dir helfen?</div>
+    </div>
+    <div class="chat-input-container">
+      <input id="chat-input" type="text" placeholder="Nachricht eingeben...">
+      <button id="send-message" class="send-message">Senden</button>
+    </div>
   </div>
-  <div id="chat-content" class="chat-content">
-    <div class="chat-message bot">Hallo! Wie kann ich dir helfen?</div>
-  </div>
-  <div class="chat-input-container">
-    <input id="chat-input" type="text" placeholder="Nachricht eingeben...">
-    <button id="send-message" class="send-message">Senden</button>
-  </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const performanceCtx = document.getElementById("performanceChart").getContext("2d");
-    const brainCtx = document.getElementById("brainChart").getContext("2d");
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+      const performanceCtx = document.getElementById("performanceChart").getContext("2d");
+      const brainCtx = document.getElementById("brainChart").getContext("2d");
 
-    const performanceData = {
-        labels: ["Tag 1", "Tag 3", "Woche 1", "Woche 2", "Woche 4", "Monat 2"],
-        datasets: [
-            {
-                label: "Möglicher-Performance-Zuwachs (%)",
-                data: [0, 3.5, 7, 12, 15, 15],
-                borderColor: "#2C3E50",
-                backgroundColor: "rgba(44, 62, 80, 0.3)", // Adjusted for transparency
-                borderWidth: 2,
-                tension: 0.4,
-                fill: true,
-            },
-        ],
-    };
+      const performanceData = {
+          labels: ["Tag 1", "Tag 3", "Woche 1", "Woche 2", "Woche 4", "Monat 2"],
+          datasets: [
+              {
+                  label: "Möglicher-Performance-Zuwachs (%)",
+                  data: [0, 3.5, 7, 12, 15, 15],
+                  borderColor: "#2C3E50",
+                  backgroundColor: "rgba(44, 62, 80, 0.3)", // Adjusted for transparency
+                  borderWidth: 2,
+                  tension: 0.4,
+                  fill: true,
+              },
+          ],
+      };
 
-    const brainData = {
-        labels: ["Tag 1", "Tag 3", "Woche 1", "Woche 2", "Woche 4", "Monat 2"],
-        datasets: [
-            {
-                label: "Möglicher-Gehirn-Performance-Zuwachs (%)",
-                data: [0, 4, 8, 12, 16, 17],
-                borderColor: "#2C3E50",
-                backgroundColor: "rgba(44, 62, 80, 0.3)", // Adjusted for transparency
-                borderWidth: 2,
-                tension: 0.4,
-                fill: true,
-            },
-        ],
-    };
+      const brainData = {
+          labels: ["Tag 1", "Tag 3", "Woche 1", "Woche 2", "Woche 4", "Monat 2"],
+          datasets: [
+              {
+                  label: "Möglicher-Gehirn-Performance-Zuwachs (%)",
+                  data: [0, 4, 8, 12, 16, 17],
+                  borderColor: "#2C3E50",
+                  backgroundColor: "rgba(44, 62, 80, 0.3)", // Adjusted for transparency
+                  borderWidth: 2,
+                  tension: 0.4,
+                  fill: true,
+              },
+          ],
+      };
 
 
-    const config = {
-        type: "line",
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: "top",
-                },
-            },
-            animation: {
-                duration: 2000,
-                easing: "easeInOutQuart",
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: "Performance (%)",
-                    },
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: "Zeitraum",
-                    },
-                },
-            },
-        },
-    };
+      const config = {
+          type: "line",
+          options: {
+              responsive: true,
+              plugins: {
+                  legend: {
+                      display: true,
+                      position: "top",
+                  },
+              },
+              animation: {
+                  duration: 2000,
+                  easing: "easeInOutQuart",
+              },
+              scales: {
+                  y: {
+                      beginAtZero: true,
+                      title: {
+                          display: true,
+                          text: "Performance (%)",
+                      },
+                  },
+                  x: {
+                      title: {
+                          display: true,
+                          text: "Zeitraum",
+                      },
+                  },
+              },
+          },
+      };
 
-    const creatineChart = new Chart(performanceCtx, {...config, data: performanceData});
-    const brainChart = new Chart(brainCtx, {...config, data: brainData});
-</script>
+      const creatineChart = new Chart(performanceCtx, {...config, data: performanceData});
+      const brainChart = new Chart(brainCtx, {...config, data: brainData});
+  </script>
 </body>
 </html>
