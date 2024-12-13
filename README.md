@@ -1,6 +1,6 @@
 # Creatine Info Page
 
-This project is a comprehensive and interactive webpage providing detailed information about creatine, its benefits, usage, and other relevant details. It includes engaging features such as a dosage calculator, an AI-powered live bot assistant, animations, and a FAQ section to enhance user experience.
+This project is a comprehensive and interactive webpage providing detailed information about creatine, its benefits, usage, and other relevant details. The website is available online at: https://im23b-citrand.github.io/PrWR_Kreatin/. It includes engaging features such as a dosage calculator, an AI-powered live bot assistant, animations, and a FAQ section to enhance user experience.
 
 ## Features
 
